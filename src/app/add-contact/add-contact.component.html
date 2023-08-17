@@ -1,0 +1,70 @@
+<div class="container mt-4 title">
+    <div class="row">
+        <div class="col">
+            <h1>
+                    <i class="fa-solid fa-user-plus"></i> &nbsp;
+                    Add Contact Page
+                
+            </h1>
+
+            <p class="mt-3" style="text-align: justify;">
+                this is a dummy data ; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat aspernatur accusamus, nostrum magnam expedita delectus facere nulla repellat dolor laboriosam cum voluptatibus asperiores aut ex? Ut minima adipisci distinctio officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, id, corporis laudantium tenetur numquam fuga maiores quos quas officiis error ipsum iure expedita natus mollitia odit, labore ab? Quisquam, nesciunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quasi mollitia error vitae iusto doloremque iste numquam distinctio nemo adipisci possimus placeat, voluptatibus tempore, laudantium debitis autem sequi culpa quas.
+            </p>
+        </div>
+    </div>
+
+  
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+           <form class="border p-3 rounded" >
+            <div class="mb-2">
+                <input  [(ngModel)]="contact.id" name="id" placeholder="ContactId" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.name" name="contactName" placeholder="Name" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.photo" name="photo" placeholder="PhotoUrl" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.email" name="email" placeholder="Email ID" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.mobile" name="mobile" placeholder="Mobile Number" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.company" name="company" placeholder="Company" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <input [(ngModel)]="contact.title" name="title" placeholder="Title" type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+               <select name="groupId"  [(ngModel)]="contact.groupId" id="" class="form-control">
+                <option  value=""selected hidden disabled >Select a Group</option>
+                <option value="{{group.id}}" *ngFor="let group of allGroups" >{{group.name}}</option>
+
+            
+               </select>
+               <div class="mb-2 mt-2">
+                <input (click)="addContact()" value="Create" type="button" class="btn btn-success">
+                <a routerLink="/" class="btn btn-warning ms-3">Close</a>
+               
+               </div>
+               
+            </div>
+        
+            
+
+
+
+
+           </form>
+        </div>
+        <div class="col-md-4">
+            <img [src]="contact.photo" alt="" class="contact_image mt-2">
+        </div>
+        </div>
+    </div>
+</div>

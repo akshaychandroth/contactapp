@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.contact_image{
+    width: 120px;
+    border-radius: 50%;
+}
